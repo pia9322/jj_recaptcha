@@ -12,7 +12,10 @@
 
 <body>
     <h1></h1>
-    <button class="g-recaptcha" data-sitekey="reCAPTCHA_site_key" data-callback='onSubmit' data-action='submit'>Submit</button>
+
+    <form action="" id="demo-form">
+        <button class="g-recaptcha" data-sitekey="reCAPTCHA_site_key" data-callback='onSubmit' data-action='submit'>Submit</button>
+    </form>
 
     <script>
         function onSubmit(token) {
