@@ -12,9 +12,11 @@
 
 <body>
     <h1></h1>
-
-    <form action="" id="demo-form">
-        <button class="g-recaptcha" data-sitekey="6Ld1hfsfAAAAAH5udf95im0MyFRL7OsV83yE858c" data-callback='onSubmit' data-action='submit'>Submit</button>
+    <form action="write_ok.php">
+        <div>이름 : <input type="text" name="name"></div>
+        <div>비밀번호 : <input type="password" name="password"></div>
+        <div>제목 : <input type="subject" name="subject"></div>
+        <div><input type="submit" value="등록"></div>
     </form>
 
     <? echo 'test'; ?>
@@ -26,10 +28,10 @@
             grecaptcha.execute(sitekey, {
                 action: 'http://www.naver.com;'
             }).then(function(token) {
-                // hiddle valude에 token값 셋팅
+                // 토큰을 받아다가 g-recaptcha 에다가 값을 넣어줍니다.
+                document.getElementById('g-recaptcha').value = token
             });
         });
-
     </script>
 </body>
 
