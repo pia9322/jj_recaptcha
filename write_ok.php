@@ -4,9 +4,9 @@ $secretKey = '6Ld1hfsfAAAAAGuBQx9HCHpCtBCxhP47L4FKSFn8'; // 위에서 발급 받
 $ip = $_SERVER['REMOTE_ADDR']; // 옵션값으로 안 넣어도 됩니다.
 
 $data = array(
-  'secret' => $secretKey,
-  'response' => $captcha,
-  'remoteip' => $ip  // ip를 안 넣을거면 여기서도 빼줘야죠
+    'secret' => $secretKey,
+    'response' => $captcha,
+    'remoteip' => $ip  // ip를 안 넣을거면 여기서도 빼줘야죠
 );
 
 $url = "https://www.google.com/recaptcha/api/siteverify";
@@ -21,9 +21,8 @@ curl_close($ch);
 $responseKeys = json_decode($response, true);
 
 if ($responseKeys["success"]) {
-  // 스팸 검사가 통과 했을 때의 처리
+    // 스팸 검사가 통과 했을 때의 처리
 } else {
-  // 스팸 검사가 실패 했을 때의 처리
-}
+    // 스팸 검사가 실패 했을 때의 처리
 
-?>
+}
