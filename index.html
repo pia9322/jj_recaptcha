@@ -24,7 +24,7 @@
         sitekey = '6Ld1hfsfAAAAAH5udf95im0MyFRL7OsV83yE858c';
         grecaptcha.ready(function() {
             grecaptcha.execute(sitekey, {
-                action: location.href='http://www.naver.com;'
+                action: 'http://www.naver.com;'
             }).then(function(token) {
                 // hiddle valude에 token값 셋팅
             });
